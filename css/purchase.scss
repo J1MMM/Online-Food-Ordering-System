@@ -1,0 +1,181 @@
+#purchase-page{
+    width: 100%;
+    height: 100%;
+    min-height: 80vh;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    padding: 3rem;
+    box-sizing: border-box;
+    .container{
+        width: 80%;
+        height: 100%;
+        min-height: 70vh;
+        background-color: #fff;
+        border-radius: 10px;
+        padding-bottom: 5rem;
+
+        overflow: hidden;
+        .header{
+            width: 100%;
+            height: 4rem;
+            background-color: #fff;
+            display: grid;
+            grid-template-columns: 16.66% 16.66% 16.66% 16.66% 16.66% 16.66% ;
+            a{
+                // background-color: aquamarine;
+                // border: 1px solid red;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: larger;
+                text-decoration: none;
+                color: rgb(77, 77, 77);
+                font-weight: 500;
+                border-bottom: 2px solid #f5f5f5;
+                &:hover{
+                    color: #2DA544;
+                }
+                &.active{
+                    color: #2DA544;
+                    border-bottom: 2px solid #2DA544;
+                }
+            }
+        }
+        main{
+            width: 100%;
+            height: 100%;
+            padding: 3rem;
+            box-sizing: border-box;
+       
+            .row{
+                margin-bottom: 2.5rem;
+                width: 100%;
+                height: auto;
+                // background-color: aquamarine;
+                display: flex;
+                flex-direction: column;
+                border: 1px solid #c2c2c2;
+                border-radius: 10px;
+                overflow: hidden;
+                box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.2);
+                -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.2);
+                -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.2);
+                .header{
+                    width: 100%;
+                    height: 3rem;
+                    // background-color: blue;
+                    color: #2DA544;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 0 1rem;
+                    box-sizing: border-box;
+                    border-bottom: 1px solid #f5f5f5;
+                    span.brand{
+                        color: #000;
+                        font-weight: 500;
+                        font-size: larger;
+                    }
+                    span{
+                        font-weight: 500;
+                        font-size: small;
+                        a{
+                            font-size: x-small;
+                       
+                            background-color: #2DA544;
+                            color: #fff;
+                            padding: 3px 8px;
+                            border-radius: 10px;
+                        }
+                    }
+                }
+                .body{
+                    width: 100%;
+                    padding: 1rem;
+                    box-sizing: border-box;
+                    // background-color: burlywood;
+                    display: flex;
+                    flex-direction: row;
+                    gap: 1rem;
+                    border-bottom: 1px solid #f5f5f5;
+
+                    .img-cont{
+                        width: 5rem;
+                        height: 5rem;
+                        // background-color: violet;
+                        display: flex;
+                        justify-content: center;
+                        overflow: hidden;
+                        
+                    }
+                    .info-cont{
+                        width: 50%;
+                        height: 100%;
+                        overflow: hidden;
+                        
+                        // background-color: #2DA544;
+                        h4,p{
+                            margin: 0%;
+                        }
+                        h4{
+                            font-weight: 500;
+                            opacity: .9;
+                        }
+                        p{
+                            font-size: small;
+                            opacity: .6;
+                            font-weight: 500;
+                            width: 100%;
+                            height: 2.7rem;
+                            overflow: hidden;
+                        }
+                    }
+                    .qty-cont{
+                        margin-left: auto;
+                        width: auto;
+                        height: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: end;
+                        // background-color: #2DA544;
+                        span{
+                            opacity: .6;
+                        }
+                    }
+                }
+                .total-cont{
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 1rem;
+                    box-sizing: border-box;
+                    border-bottom: 1px solid #f5f5f5;
+                    .item-count{
+                        opacity: .6;
+                    }
+                    .payment{
+                        font-size: larger;
+                        font-weight: 500;
+                        .total-price{
+                            color: #2DA544;
+                        }
+                    }
+                }
+                .footer-cont{
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    padding: .5rem 1rem;
+                    box-sizing: border-box;
+                    font-size: small;
+                    span{
+                        opacity: .6;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+    }
+}
