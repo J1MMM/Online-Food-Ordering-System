@@ -24,7 +24,13 @@ var price = document.getElementById("price");
 var title = document.getElementById("title");
 var info = document.getElementById("info");
 var regSubmitBtn = document.getElementById("register-btn");
-var regForm = document.getElementById("register-form"); //javascript stop reading because regform not exist, it's not exist because the page is not on register page, that's why i put ternary to prevent js stop and continue reading
+var regForm = document.getElementById("register-form");
+var menu = document.getElementById('menu');
+var menuBtn = document.getElementById('menu-btn');
+var navmenu = document.getElementById('nav-items');
+menuBtn.addEventListener('click', function () {
+  navmenu.classList.toggle('hidden');
+}); //javascript stop reading because regform not exist, it's not exist because the page is not on register page, that's why i put ternary to prevent js stop and continue reading
 
 regForm ? regForm.addEventListener('submit', function () {
   //I add delay to send form before the submit will disable 
@@ -35,9 +41,11 @@ regForm ? regForm.addEventListener('submit', function () {
 }) : ''; //change color of navbar when scroll
 
 window.addEventListener('scroll', function () {
-  if (scrollY >= 200) {
+  if (scrollY >= 1) {
     navbar.classList.add('scrolled');
+    menu.classList.add('scrolled');
   } else {
+    menu.classList.remove('scrolled');
     navbar.classList.remove('scrolled');
   }
 }); // auto scroll when click 

@@ -1,3 +1,8 @@
+<?php 
+    if(!isset($_SESSION['admin'])){
+    header('Location: /food-ordering-system/admin/login.php');
+}
+?>
 <?php
     $qry = $mysqli->query("SELECT orders.id, orders.status,  orders.order_date, address.fullname, address.phone_number, address.address, address.additional_info, products.food_name, products.price, cart_list.quantity FROM orders,address,products,cart_list WHERE cart_list.id = orders.cart_id AND address.user_id = orders.user_id AND products.id = cart_list.product_id AND orders.status = 'pending' ORDER BY orders.id");
     $orders = mysqli_fetch_all($qry, MYSQLI_ASSOC);

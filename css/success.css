@@ -39,4 +39,23 @@
 #success-page p a{
     color: #41AD49;
 }
-
+@media screen and (max-width: 480px){
+    #success-page{
+        padding: 1rem;
+    }
+    #success-page #success-modal{
+        width: 100%;
+        padding: 1rem;
+    }
+    #success-page img{
+        width: 3rem;
+    }
+    #success-page h1{
+        font-size: medium;
+        letter-spacing: 2px;
+    }
+    #success-page p{
+        font-size: x-small;
+        margin-top: 0;
+    }
+}

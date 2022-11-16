@@ -7,7 +7,6 @@
   box-sizing: border-box;
   display: flex;
   justify-content: center;
-  padding-bottom: 8rem;
   font-weight: 500;
 }
 .register-page #reg-err-msg {
@@ -43,7 +42,7 @@
 }
 .register-page #register-form .input-container {
   display: grid;
-  grid-template-columns: 10% 90%;
+  grid-template-columns: 8% auto;
   margin-bottom: 2rem;
   align-items: center;
   width: 100%;
@@ -83,22 +82,6 @@
 .register-page #register-form .input-container input:focus::placeholder {
   transform: translate(-10rem);
 }
-.register-page #register-form .fullname-cont {
-  width: 100%;
-  height: 3rem;
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-  margin-bottom: 1.5rem;
-}
-.register-page #register-form .fullname-cont .input-container {
-  margin: 0;
-  display: inline;
-  width: 43%;
-}
-.register-page #register-form .fullname-cont i {
-  margin-right: 0.3rem;
-}
 .register-page #register-btn {
   cursor: pointer;
   margin-top: 0.5rem;
@@ -130,4 +113,27 @@
 }
 .register-page .AHAC #back:hover {
   color: #33b84d;
+}
+
+@media screen and (max-width: 480px) {
+  .register-page {
+    padding: 2rem;
+    min-height: 100%;
+  }
+  .register-page #register-form {
+    padding: 2rem;
+    max-width: none;
+    height: 100%;
+    width: 100%;
+    margin-top: 0;
+  }
+  .register-page #register-form .input-container {
+    grid-template-columns: 15% auto;
+  }
+  .register-page #register-form #inpt-cont {
+    gap: 0.5rem !important;
+  }
+  .register-page #register-form i {
+    margin-bottom: -0.5rem;
+  }
 }

@@ -59,8 +59,8 @@
                 $mail->Host = 'smtp.gmail.com';
                 $mail->SMTPAuth = true;
                 //sender acc
-                $mail->Username = 'jimuelbaraero@gmail.com';
-                $mail->Password = 'bipcnpidiedbhixp';
+                $mail->Username = 'bsit.baraero.jimuel@gmail.com';
+                $mail->Password = 'wtyxsggdzabfzhgi';
                 //code from stackoverflow to fix the ewan issue
                 $mail->SMTPOptions = array(
                     'ssl' => array(

@@ -173,4 +173,106 @@
 }
 .user-page #user-page-cont .info-cont .info-sect #save-btn:hover {
   background-color: #38be53;
+}
+
+@media screen and (max-width: 480px) {
+  .user-page {
+    width: 100%;
+    height: 100%;
+    min-height: 90vh;
+    padding: 1rem;
+    margin: 0;
+  }
+  .user-page #user-page-cont {
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    padding: 1rem;
+    padding-bottom: 5rem;
+  }
+  .user-page #user-page-cont h1 {
+    margin: 0;
+    font-weight: 500;
+    font-size: large;
+  }
+  .user-page #user-page-cont p {
+    font-size: x-small;
+    margin-bottom: 0;
+  }
+  .user-page #user-page-cont .info-cont {
+    margin-top: 0;
+  }
+  .user-page #user-page-cont .info-cont .pfp-section {
+    margin-bottom: 0rem;
+  }
+  .user-page #user-page-cont .info-cont .pfp-section #change-pfp-form {
+    border: 1px solid #f5f5f5;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+  .user-page #user-page-cont .info-cont .pfp-section #change-pfp-form .pfp-cont {
+    width: 8rem;
+    height: 8rem;
+  }
+  .user-page #user-page-cont .info-cont .info-sect {
+    margin-top: 1rem;
+    width: 100%;
+    height: 100%;
+    gap: 0.5rem;
+    font-size: x-small;
+  }
+  .user-page #user-page-cont .info-cont .info-sect .split-row {
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-left: 0;
+    width: 100%;
+  }
+  .user-page #user-page-cont .info-cont .info-sect .split-row span {
+    display: grid;
+    grid-template-columns: 20% auto;
+    gap: 0.5rem;
+    width: 100%;
+    margin: 0 !important;
+  }
+  .user-page #user-page-cont .info-cont .info-sect .split-row label {
+    text-align: end;
+    opacity: 0.8;
+  }
+  .user-page #user-page-cont .info-cont .info-sect .split-row input {
+    box-sizing: border-box;
+    width: 100%;
+    font-size: small;
+  }
+  .user-page #user-page-cont .info-cont .info-sect .info-sect-row {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 20% auto;
+    gap: 0.5rem;
+    box-sizing: border-box;
+  }
+  .user-page #user-page-cont .info-cont .info-sect .info-sect-row input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: small;
+  }
+  .user-page #user-page-cont .info-cont .info-sect #location-info {
+    width: 100%;
+    padding: 0.5rem;
+    box-sizing: border-box;
+    font-size: small;
+  }
+  .user-page #user-page-cont .info-cont .info-sect #save-btn {
+    margin-top: 1rem;
+    width: 6rem;
+    padding: 12px;
+    border: none;
+    background-color: #2DA544;
+    color: white;
+  }
+  .user-page #user-page-cont .info-cont .info-sect #save-btn:hover {
+    background-color: #38be53;
+  }
 }/*# sourceMappingURL=user-page.css.map */

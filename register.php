@@ -7,24 +7,23 @@
         <h2>Register</h2>
         <hr>
         <p id="reg-err-msg"><?php echo $reg_err_msg?></p>
-        <div class="fullname-cont">
+        <div class="input-container">
             <i class="gg-profile"></i>
-            <div class="input-container">
-                <input 
-                    required 
-                    type="text" 
-                    name="fname" 
-                    placeholder="First Name"
-                    >
-            </div>
-            <div class="input-container">
-                <input 
-                    required 
-                    type="text" 
-                    name="lname" 
-                    placeholder="Last Name" 
+            <input 
+                required 
+                type="text" 
+                name="fname" 
+                placeholder="First Name"
                 >
-            </div>
+        </div>
+        <div class="input-container">
+            <span></span>
+            <input 
+                required 
+                type="text" 
+                name="lname" 
+                placeholder="Last Name" 
+            >
         </div>
         <div class="input-container">
             <i class="gg-mail"></i>

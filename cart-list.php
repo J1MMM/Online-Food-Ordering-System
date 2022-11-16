@@ -13,10 +13,10 @@
         
     <?php if(!empty($all_product_incart)): ?>
     <div id="header" class="page-row">
-        <span style="margin-left: 3rem">Product</span>
+        <span>Product</span>
         <span>Price</span>
         <span>Quantity</span>
-        <span>Total Price</span>
+        <span>Total</span>
         <span>Actions</span>
     </div>
     <form id="check-out-form" method="POST">
@@ -35,7 +35,7 @@
             </div>
             <h4 id="cart-list-title" class="title"><?= $product['food_name'] ?></h4>
         </div>
-        <span id="cart-list-price"><?= $product['price'] ?></span>
+        <span id="cart-list-price" style="color: #2DA544"><?= $product['price'] ?></span>
         <span id="cart-list-quantity"><?= $product['quantity'] ?></span>
    
         <span id="cart-list-totalprice"><?= '$'.$total_price ?></span>
@@ -49,7 +49,8 @@
             <input type='submit' value="Delete" name='multi_delete'>
         </div>
         <div class="checkout-btn-container">
-            <span>Total (<span id="total-item">0 item</span>): <span id="price">$0.00</span> </span>
+            <span>Total (<span id="total-item">0 item</span>):</span>
+            <div id="price">$0.00</div> 
             <button class="checkout-btn" type="submit" name="checkout">Check Out</button>
         </div>
     </div>

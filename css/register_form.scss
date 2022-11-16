@@ -8,7 +8,6 @@
     box-sizing: border-box;
     display: flex;
     justify-content: center;
-    padding-bottom: 8rem;
     font-weight: 500;
 
     #reg-err-msg{
@@ -44,7 +43,7 @@
     
         .input-container{
             display: grid;
-            grid-template-columns: 10% 90%;
+            grid-template-columns: 8% auto;
             margin-bottom: 2rem;
             align-items: center;
             width: 100%;
@@ -85,22 +84,6 @@
                 }
             }
         }
-        .fullname-cont{
-            width: 100%;
-            height: 3rem;
-            display: flex;
-            gap: 1rem;
-            align-items: center;
-            margin-bottom: 1.5rem;
-            .input-container{
-                margin: 0;
-                display: inline;
-                width: 43%;
-            }
-            i{
-                margin-right: .3rem;
-            }
-        }
     }
     #register-btn{
         cursor: pointer;
@@ -133,6 +116,28 @@
             &:hover{
                 color: #33b84d;
             }
+        }
+    }
+}
+@media screen and (max-width: 480px){
+    .register-page{
+        padding: 2rem;
+        min-height: 100%;
+        #register-form{
+            padding: 2rem;
+            max-width: none;
+            height: 100%;
+            width: 100%;
+            margin-top: 0;
+            .input-container{
+            grid-template-columns: 15% auto;
+            }
+            #inpt-cont{
+                gap: .5rem !important;
+            }
+          i{
+            margin-bottom: -.5rem;
+          }
         }
     }
 }

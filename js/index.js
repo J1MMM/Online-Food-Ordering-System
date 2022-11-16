@@ -24,7 +24,13 @@ const info = document.getElementById("info");
 const regSubmitBtn = document.getElementById("register-btn");
 const regForm = document.getElementById("register-form");
 
+const menu = document.getElementById('menu');
+const menuBtn = document.getElementById('menu-btn');
+const navmenu = document.getElementById('nav-items');
 
+menuBtn.addEventListener('click', () => {
+    navmenu.classList.toggle('hidden')
+})
     
 
 //javascript stop reading because regform not exist, it's not exist because the page is not on register page, that's why i put ternary to prevent js stop and continue reading
@@ -42,9 +48,11 @@ regForm.addEventListener('submit', ()=>{
 
 //change color of navbar when scroll
 window.addEventListener('scroll', () => {
-    if(scrollY >= 200){
+    if(scrollY >= 1){
         navbar.classList.add('scrolled');
+        menu.classList.add('scrolled');
     }else{
+        menu.classList.remove('scrolled');
         navbar.classList.remove('scrolled');
     }
 })
@@ -135,3 +143,4 @@ const addtocart = () => {
 addtocartBtn ?
 addtocartBtn.addEventListener('click', addtocart) : //add to cart onlick listener
 addtocartLoginBtn.addEventListener('click', goToLoginForm);//add to cart button onclick listener when no session
+ 

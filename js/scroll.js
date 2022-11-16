@@ -1,3 +1,3 @@
-setTimeout(() => {
-    window.scrollTo(0, 400);
-}, 300)
+// setTimeout(() => {
+//     window.scrollTo(0, 400);
+// }, 300)

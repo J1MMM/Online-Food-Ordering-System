@@ -32,8 +32,11 @@
                 Online Food Ordering System
             </h2>
         </a>
+        <button id="menu-btn">
+            <i id="menu" class="gg-menu"></i>
+        </button>
         
-        <div class="nav-items">
+        <div id="nav-items" class="nav-items hidden">
             <a href="index.php?page=home" style="text-decoration: none;">Home</a>
        
             <a href="index.php?page=cart-list" class="cart-link">
@@ -56,13 +59,13 @@
             </div>
      
             <?php }else{ ?>
-                <div class="nav-profile <?php echo isset($_GET['login']) ? 'loggedin':'' ?>">
+                <div id="nav-profile" class="nav-profile <?php echo isset($_GET['login']) ? 'loggedin':'' ?>">
                     <div class="pfp-cont">
                         <img src="<?=$user['pfp_path']?>" alt="">
                     </div>
                     <span><?php print_r($user['first_name']) ?></span>
                     <div class="profile-modal">
-                        <div class="banner">
+                        <div class="user-modal-banner">
                             <div class="pfp-cont">
                             <img src="<?=$user['pfp_path']?>" alt="Profile">
                             </div>
@@ -84,14 +87,34 @@
                         </div>
                     </div>
                 </div>
+                <!-- burger menu  -->
+            <a id="modal-menu" href="index.php?page=user" class="burger-menu-links">My Account</a>
+            <a id="modal-menu" href="index.php?page=purchase&column=all" class="burger-menu-links">My Purchase</a>
+            <a href="/food-ordering-system/includes/logout.php" class="logout-btn burger-menu-links">Sign out</a>
             <?php } ?>
+            
+
         </div>
     </nav>
     <div class="banner">
         <img src="./assets/images/banner.jpg" alt="">
         <div class="banner-content">
             <h1>Welcome to Online Food Ordering System</h1>
-            <button id="order-now-btn">ORDER NOW</button>
+            <?php if(isset($_GET['page']) && $_GET['page'] == 'cart-list'){ ?>
+                <button id="order-now-btn">CART LIST</button>
+            <?php }elseif(isset($_GET['page']) && $_GET['page'] == 'about'){?>
+                <span></span>
+            <?php }elseif(isset($_GET['page']) && $_GET['page'] == 'login'){?>
+                <span></span>
+            <?php }elseif(isset($_GET['page']) && $_GET['page'] == 'register'){?>
+                <span></span>
+            <?php }elseif(isset($_GET['page']) && $_GET['page'] == 'purchase'){?>
+                <button id="order-now-btn">MY PURCHASE</button>
+            <?php }elseif(isset($_GET['page']) && $_GET['page'] == 'user'){?>
+                <span></span>
+            <?php }else{?>
+                <button id="order-now-btn">ORDER NOW</button>
+            <?php }?>
         </div>
     </div>
     

@@ -1,14 +1,13 @@
 .home-page {
   padding: 2rem;
   width: 100%;
-  min-height: 100vh;
+  min-height: 50vh;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   box-sizing: border-box;
-  padding-bottom: 13rem;
   background-color: #F5F5F5;
 }
 .home-page #search-form {
@@ -19,23 +18,20 @@
   width: 90%;
   height: 3rem;
   border-radius: 5px;
-  display: flex;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: 2% 90% auto;
   align-items: center;
   color: #BFC4CB;
   border: 1px solid #BFC4CB;
-}
-.home-page #search-form i {
-  position: absolute;
-  left: 1.3rem;
+  padding: 0 1rem;
+  box-sizing: border-box;
 }
 .home-page #search-form input {
-  width: 87%;
+  width: 100%;
   height: 80%;
   outline: none;
   font-size: large;
   border: none;
-  margin-left: -3rem;
   color: #626a75;
 }
 .home-page #search-form input:-webkit-autofill,
@@ -144,11 +140,12 @@
   font-weight: 600;
 }
 .home-page .buttons-container {
-  position: absolute;
-  left: 50%;
-  bottom: 8.5rem;
-  transform: translateX(-50%);
+  width: 100%;
+  position: static;
+  margin: 0;
+  margin-top: 2rem;
   display: flex;
+  justify-content: center;
   gap: 0.3rem;
 }
 .home-page .buttons-container .page-button {
@@ -283,12 +280,7 @@
   /* Firefox */
 }
 .home-page .modal-container .card-modal .input-qty-container small {
-  margin-left: 0.5rem;
-  color: #fff;
-  background-color: #626a75;
-  padding: 0.2rem 0.5rem;
-  border-radius: 10px;
-  font-size: x-small;
+  display: none;
 }
 .home-page .modal-container .card-modal .input-qty-container span {
   margin-right: 1rem;
@@ -368,5 +360,475 @@
 @keyframes popIn {
   100% {
     scale: 1;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .home-page {
+    padding: 2rem;
+    gap: 1rem;
+    justify-content: center;
+  }
+  .home-page #search-form {
+    left: 0;
+    transform: translate(0);
+    width: 100%;
+    border: 1px solid #BFC4CB;
+    gap: 1rem;
+    grid-template-columns: 1% 90% auto;
+  }
+  .home-page #search-form input {
+    width: 100%;
+    font-size: medium;
+    justify-self: flex-start;
+  }
+  .home-page #search-form #search-btn {
+    height: 70%;
+    font-size: small;
+    font-weight: 600;
+  }
+  .home-page #main {
+    width: 100%;
+    gap: 0.5rem;
+    row-gap: 1rem;
+    margin: 0;
+  }
+  .home-page #main .nmf {
+    font-size: medium;
+  }
+  .home-page #card {
+    margin: 0;
+    width: 95%;
+    height: 20rem;
+    font-size: medium;
+  }
+  .home-page #card .info-container {
+    padding: 0.5rem;
+  }
+  .home-page #card .info-container .info {
+    height: 5rem;
+  }
+  .home-page #card .info-container .view-btn {
+    font-size: small;
+  }
+  .home-page #card .info-container .view-btn i {
+    margin-top: -0.2rem;
+  }
+
+  #buttons-container {
+    font-size: medium;
+  }
+  #buttons-container .page-button {
+    padding: 0.5rem 0.1 0.2rem;
+  }
+  #buttons-container .prev-btn {
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    padding: 0.5rem 1rem;
+  }
+  #buttons-container .next-btn {
+    padding: 0.5rem 1rem;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+
+  #view-modal {
+    width: 40%;
+    padding: 1rem;
+  }
+  #view-modal .card-modal .gg-close {
+    right: 1rem;
+    top: 1.3rem;
+  }
+  #view-modal .card-modal h1 {
+    margin: 0;
+    margin-top: 1rem;
+    font-weight: 500;
+  }
+  #view-modal .card-modal hr {
+    margin-bottom: 2rem;
+  }
+  #view-modal .card-modal .img-container {
+    height: 15rem;
+    margin: 0;
+  }
+  #view-modal .card-modal .price {
+    margin: 0;
+    margin-top: 1rem;
+  }
+  #view-modal .card-modal h2 {
+    margin-top: 0;
+    margin-bottom: -1rem;
+    font-weight: 500;
+    font-size: x-large;
+  }
+  #view-modal .card-modal .info {
+    margin-top: 1rem;
+    max-height: 10rem;
+    font-size: medium;
+  }
+  #view-modal .card-modal .input-qty-container {
+    font-size: medium;
+    margin-left: 0;
+    transform: translateX(0);
+    flex-direction: row;
+    gap: 0.5rem;
+    /* Firefox */
+  }
+  #view-modal .card-modal .input-qty-container small {
+    display: none;
+  }
+  #view-modal .card-modal .input-qty-container span {
+    margin-right: 1rem;
+  }
+  #view-modal .card-modal .input-qty-container button {
+    height: 2.5rem;
+    width: 2.5rem;
+    font-size: medium;
+  }
+  #view-modal .card-modal .input-qty-container button#decrement {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+  #view-modal .card-modal .input-qty-container button#increment {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  #view-modal .card-modal .input-qty-container input[type=number] {
+    -moz-appearance: textfield;
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: medium;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .home-page #card {
+    width: 90%;
+    height: 16rem;
+    font-size: small;
+  }
+  .home-page #card .img-container {
+    height: 40%;
+  }
+  .home-page #card .info-container .info {
+    height: 4rem;
+    font-size: small;
+  }
+
+  #buttons-container .page-button {
+    padding: 0.5rem 0.1 0.2rem;
+  }
+  #buttons-container .prev-btn {
+    padding: 0.5rem 1rem;
+  }
+  #buttons-container .next-btn {
+    padding: 0.5rem 1rem;
+  }
+
+  #view-modal {
+    width: 40%;
+    padding: 1rem;
+  }
+  #view-modal .card-modal .gg-close {
+    right: 1rem;
+    top: 1.3rem;
+  }
+  #view-modal .card-modal h1 {
+    margin: 0;
+    margin-top: 1rem;
+    font-weight: 500;
+  }
+  #view-modal .card-modal hr {
+    margin-bottom: 2rem;
+  }
+  #view-modal .card-modal .img-container {
+    height: 15rem;
+    margin: 0;
+  }
+  #view-modal .card-modal .price {
+    margin: 0;
+    margin-top: 1rem;
+  }
+  #view-modal .card-modal h2 {
+    margin-top: 0;
+    margin-bottom: -1rem;
+    font-weight: 500;
+    font-size: x-large;
+  }
+  #view-modal .card-modal .info {
+    margin-top: 1rem;
+    max-height: 10rem;
+    font-size: medium;
+  }
+  #view-modal .card-modal .input-qty-container {
+    font-size: medium;
+    flex-direction: row;
+    /* Firefox */
+  }
+  #view-modal .card-modal .input-qty-container span {
+    margin-right: 1rem;
+  }
+  #view-modal .card-modal .input-qty-container button {
+    height: 2.5rem;
+    width: 2.5rem;
+    font-size: medium;
+  }
+  #view-modal .card-modal .input-qty-container input[type=number] {
+    -moz-appearance: textfield;
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: medium;
+  }
+}
+@media screen and (max-width: 768px) {
+  .home-page {
+    padding: 1rem;
+    gap: 1rem;
+    justify-content: center;
+    padding-bottom: 2rem;
+  }
+  .home-page #search-form {
+    left: 0;
+    transform: translate(0);
+    width: 100%;
+    border: 1px solid #BFC4CB;
+    gap: 1rem;
+  }
+  .home-page #search-form input {
+    width: 70%;
+    font-size: medium;
+  }
+  .home-page #search-form #search-btn {
+    height: 70%;
+    font-size: small;
+    font-weight: 600;
+  }
+  .home-page #main {
+    width: 100%;
+    gap: 0.5rem;
+    row-gap: 1rem;
+    margin: 0;
+    grid-template-columns: 50% 50%;
+  }
+  .home-page #card {
+    margin: 0;
+    width: 95%;
+    height: 20rem;
+    font-size: x-small;
+  }
+  .home-page #card .info-container {
+    padding: 0.5rem;
+  }
+  .home-page #card .info-container .info {
+    height: 4rem;
+  }
+  .home-page #card .info-container .view-btn {
+    font-size: small;
+  }
+  .home-page #card .info-container .view-btn i {
+    margin-top: -0.2rem;
+  }
+
+  #view-modal {
+    width: 70%;
+    padding: 1rem;
+  }
+  #view-modal .card-modal .gg-close {
+    right: 1rem;
+    top: 1.3rem;
+  }
+  #view-modal .card-modal h1 {
+    margin: 0;
+    margin-top: 1rem;
+    font-size: x-large;
+    font-weight: 500;
+  }
+  #view-modal .card-modal hr {
+    margin-bottom: 1rem;
+  }
+  #view-modal .card-modal .img-container {
+    height: 10rem;
+    margin: 0;
+  }
+  #view-modal .card-modal .price {
+    margin: 0;
+  }
+  #view-modal .card-modal h2 {
+    margin-top: 0;
+    margin-bottom: -1rem;
+    font-weight: 500;
+    font-size: larger;
+  }
+  #view-modal .card-modal .info {
+    margin-top: 1rem;
+    max-height: 10rem;
+    font-size: small;
+  }
+  #view-modal .card-modal .input-qty-container {
+    font-size: small;
+    margin-left: 0;
+    transform: translateX(0);
+    flex-direction: column;
+    gap: 0.3rem;
+    /* Firefox */
+  }
+  #view-modal .card-modal .input-qty-container small {
+    display: none;
+  }
+  #view-modal .card-modal .input-qty-container span {
+    margin-right: 1rem;
+  }
+  #view-modal .card-modal .input-qty-container button {
+    height: 2rem;
+    width: 2rem;
+    font-size: medium;
+  }
+  #view-modal .card-modal .input-qty-container button#decrement {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+  #view-modal .card-modal .input-qty-container button#increment {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  #view-modal .card-modal .input-qty-container input[type=number] {
+    -moz-appearance: textfield;
+    width: 2rem;
+    height: 2rem;
+    font-size: medium;
+  }
+}
+@media screen and (max-width: 480px) {
+  .home-page {
+    padding: 1rem;
+    gap: 1rem;
+    justify-content: center;
+  }
+  .home-page #search-form {
+    left: 0;
+    transform: translate(0);
+    width: 100%;
+    border: 1px solid #BFC4CB;
+    gap: 1rem;
+  }
+  .home-page #search-form input {
+    width: 70%;
+    font-size: medium;
+  }
+  .home-page #search-form #search-btn {
+    height: 70%;
+    font-size: small;
+    font-weight: 600;
+  }
+  .home-page #main {
+    width: 100%;
+    gap: 0.5rem;
+    row-gap: 1rem;
+    margin: 0;
+    grid-template-columns: 50% 50%;
+  }
+  .home-page #card {
+    margin: 0;
+    width: 95%;
+    height: 15rem;
+    font-size: x-small;
+  }
+  .home-page #card .info-container {
+    padding: 0.5rem;
+  }
+  .home-page #card .info-container .info {
+    height: 3.5rem;
+  }
+  .home-page #card .info-container .view-btn {
+    font-size: small;
+  }
+  .home-page #card .info-container .view-btn i {
+    margin-top: -0.2rem;
+  }
+
+  #buttons-container {
+    margin-top: 1rem;
+    font-size: small;
+  }
+  #buttons-container .page-button {
+    padding: 0.3rem 0.8rem;
+  }
+  #buttons-container .prev-btn {
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    padding: 0.3rem 0.5rem;
+  }
+  #buttons-container .next-btn {
+    padding: 0.3rem 0.5rem;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+
+  #view-modal {
+    width: 70%;
+    padding: 1rem;
+  }
+  #view-modal .card-modal .gg-close {
+    right: 1rem;
+    top: 1.3rem;
+  }
+  #view-modal .card-modal h1 {
+    margin: 0;
+    margin-top: 1rem;
+    font-size: x-large;
+    font-weight: 500;
+  }
+  #view-modal .card-modal hr {
+    margin-bottom: 1rem;
+  }
+  #view-modal .card-modal .img-container {
+    height: 10rem;
+    margin: 0;
+  }
+  #view-modal .card-modal .price {
+    margin: 0;
+  }
+  #view-modal .card-modal h2 {
+    margin-top: 0;
+    margin-bottom: -1rem;
+    font-weight: 500;
+    font-size: larger;
+  }
+  #view-modal .card-modal .info {
+    margin-top: 1rem;
+    max-height: 10rem;
+    font-size: small;
+  }
+  #view-modal .card-modal .input-qty-container {
+    font-size: small;
+    margin-left: 0;
+    transform: translateX(0);
+    flex-direction: column;
+    gap: 0.3rem;
+    /* Firefox */
+  }
+  #view-modal .card-modal .input-qty-container small {
+    display: none;
+  }
+  #view-modal .card-modal .input-qty-container span {
+    margin-right: 1rem;
+  }
+  #view-modal .card-modal .input-qty-container button {
+    height: 2rem;
+    width: 2rem;
+    font-size: medium;
+  }
+  #view-modal .card-modal .input-qty-container button#decrement {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+  #view-modal .card-modal .input-qty-container button#increment {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  #view-modal .card-modal .input-qty-container input[type=number] {
+    -moz-appearance: textfield;
+    width: 2rem;
+    height: 2rem;
+    font-size: medium;
   }
 }

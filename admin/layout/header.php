@@ -1,4 +1,5 @@
 <?php include '../config/DBconnection.php'?>
+<?php session_start() ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -42,6 +43,9 @@
             <a
                 class="<?= isset($_GET['table']) && $_GET['table'] == 'rejected' ? 'active' : '' ?>" 
                 href="/food-ordering-system/admin/index.php?page=home&table=rejected">Rejected</a>
+        </li>
+        <li>
+            <a href="/food-ordering-system/admin/index.php?page=logout">Logout</a>
         </li>
     </ul>
 </nav>

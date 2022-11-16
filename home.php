@@ -9,7 +9,7 @@
         <input required type="text" name="keyword" placeholder="Search product...">
         <button name="search" id="search-btn">Search</button>
     </form>
-    <main>
+    <main id="main">
         <!-- if no item found  -->
     <?php if(empty($product_data)): ?>
         <h1 class="nmf">Sorry, no product found!</h1>
@@ -19,7 +19,7 @@
     ?>
     <!-- render items  -->
     <?php foreach($product_data as $product): ?>
-    <div class="card">
+    <div class="card" id="card">
         <div class="img-container">
             <img src="./assets/images/<?php echo $items[rand(0,11)]?>.jpg" alt="">
         </div>
@@ -47,7 +47,7 @@
 
 <!-- pagination buttons  -->
 <?php if(isset($total_pages) && !isset($_POST['search'])): ?>
-    <div class="buttons-container">
+    <div id="buttons-container" class="buttons-container">
         <!-- rendering buttons  -->
         <a class="page-button prev-btn" href="index.php?slide=<?php echo $current_slide - $prev_value?>">Prev</a>
         <?php for($i; $i<=$j; $i++): ?>
@@ -74,9 +74,12 @@
             
             <div class="input-qty-container">
                 <span>Quantity:</span>
-                <button id="decrement">-</button>
-                <input type="number" name="input-qty" id="input-qty" value="1" min="1" >
-                <button id="increment">+</button>
+                <span>
+
+                    <button id="decrement">-</button>
+                    <input type="number" name="input-qty" id="input-qty" value="1" min="1" >
+                    <button id="increment">+</button>
+                </span>
                 <small><?php echo $product['status'] ?'AVAILABLE':'SOLD OUT' ?></small>
             </div>
 

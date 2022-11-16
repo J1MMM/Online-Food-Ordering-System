@@ -22,7 +22,7 @@
   height: 4rem;
   background-color: #fff;
   display: grid;
-  grid-template-columns: 16.66% 16.66% 16.66% 16.66% 16.66% 16.66%;
+  grid-template-columns: auto auto auto auto auto auto;
 }
 #purchase-page .container .header a {
   display: flex;
@@ -164,4 +164,78 @@
 #purchase-page .container main .row .footer-cont span {
   opacity: 0.6;
   font-weight: 600;
+}
+
+@media screen and (max-width: 480px) {
+  #purchase-page {
+    padding: 1rem;
+  }
+  #purchase-page .container {
+    width: 100%;
+    min-height: 100vh;
+    padding-bottom: 1rem;
+  }
+  #purchase-page .container .header {
+    font-size: xx-small;
+    text-align: center;
+    height: 4rem;
+    display: grid;
+    grid-template-columns: 2rem auto auto auto auto auto;
+  }
+  #purchase-page .container main {
+    padding: 1rem;
+  }
+  #purchase-page .container main .row {
+    margin-bottom: 1rem;
+  }
+  #purchase-page .container main .row .header {
+    padding: 0 0.5rem;
+    height: 2rem;
+  }
+  #purchase-page .container main .row .header span {
+    font-size: x-small !important;
+  }
+  #purchase-page .container main .row .body {
+    width: 100%;
+    padding: 0.5rem;
+  }
+  #purchase-page .container main .row .body .img-cont {
+    width: 4rem;
+    min-width: 4rem;
+    height: 4rem;
+  }
+  #purchase-page .container main .row .body .info-cont {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  #purchase-page .container main .row .body .info-cont h4, #purchase-page .container main .row .body .info-cont p {
+    margin: 0%;
+  }
+  #purchase-page .container main .row .body .info-cont h4 {
+    font-weight: 500;
+    opacity: 0.9;
+    font-size: small;
+  }
+  #purchase-page .container main .row .body .info-cont p {
+    font-size: xx-small;
+    height: 2.3rem;
+    overflow: hidden;
+  }
+  #purchase-page .container main .row .body .qty-cont {
+    font-size: x-small;
+  }
+  #purchase-page .container main .row .total-cont {
+    padding: 0.5rem;
+  }
+  #purchase-page .container main .row .total-cont .item-count {
+    font-size: x-small;
+  }
+  #purchase-page .container main .row .total-cont .payment {
+    font-size: small;
+  }
+  #purchase-page .container main .row .footer-cont {
+    padding: 0.5rem;
+    font-size: xx-small;
+  }
 }/*# sourceMappingURL=purchase.css.map */

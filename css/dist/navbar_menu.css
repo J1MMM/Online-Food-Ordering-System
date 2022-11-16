@@ -29,7 +29,7 @@
   box-sizing: border-box;
   overflow: hidden;
 }
-.navbar .nav-profile .profile-modal .banner {
+.navbar .nav-profile .profile-modal .user-modal-banner {
   position: relative;
   top: -1rem;
   left: -1rem;
@@ -40,7 +40,7 @@
   z-index: 1;
   overflow: visible;
 }
-.navbar .nav-profile .profile-modal .banner .pfp-cont {
+.navbar .nav-profile .profile-modal .user-modal-banner .pfp-cont {
   width: 5rem;
   height: 5rem;
   background-color: #f5f5f5;

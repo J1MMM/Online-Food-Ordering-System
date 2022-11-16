@@ -119,3 +119,14 @@
         }
     }
 }
+@media screen and (max-width: 480px){
+    .login-page{
+        padding: 10rem 2rem;
+        min-height: 100%;
+        #login-form{
+            max-width: none;
+            height: 100%;
+            width: 100%;
+        }
+    }
+}

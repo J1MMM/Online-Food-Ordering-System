@@ -7,6 +7,17 @@
   .about-page h1{
     color: #2DA544;
   }
+  @media screen and (max-width: 1200px){
+    .about-page{
+    padding: 1rem;
+  }
+  .about-page h1{
+    font-size: larger;
+  }
+  .about-page p{
+    font-size: x-small;
+  }
+}
 </style>
 
 <div class="about-page">

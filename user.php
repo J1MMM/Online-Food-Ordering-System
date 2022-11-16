@@ -9,7 +9,7 @@
                 <!-- form to change pfp  -->
                 <form id="change-pfp-form" method="POST" action="" enctype="multipart/form-data">
                     <label for="select-file" class="pfp-cont">
-                        <img src="<?=$UserRecord['pfp_path'] ?? ''?>" alt="">
+                        <img src="<?=$user['pfp_path']?>" alt="">
                         <input type="file" name="upload" id="select-file" >
                     </label>
                     <?php echo $message ?? null ?>
@@ -39,7 +39,7 @@
                     </div>
                     <div class="info-sect-row">
                         <label for="">Email</label>
-                        <input disabled type="text" name="" id="" value="<?=$UserRecord['email'] ?? ''?>">
+                        <input disabled type="text" name="" id="" value="<?=$user['email'] ?? ''?>">
                     </div>
                     <div class="info-sect-row">
                         <label for="">Phone Number</label>

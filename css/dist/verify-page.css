@@ -14,7 +14,7 @@
   width: 50%;
   max-width: 40rem;
   height: auto;
-  background-color: white;
+  background-color: #ffff;
   display: flex;
   align-items: center;
   color: #353B4B;
@@ -101,4 +101,4 @@
   .verify-page .modal span.link {
     color: #2DA544;
   }
-}/*# sourceMappingURL=verify-page.css.map */
+}
