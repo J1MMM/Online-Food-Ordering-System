@@ -9,6 +9,7 @@
   flex-direction: column;
   box-sizing: border-box;
   background-color: #F5F5F5;
+  padding-bottom: 5rem;
 }
 .home-page #search-form {
   position: relative;
@@ -63,6 +64,7 @@
   row-gap: 2rem;
   margin-left: 2rem;
   width: 90%;
+  min-height: 50vh;
 }
 .home-page main .card {
   display: inline;
@@ -79,6 +81,9 @@
   width: 100%;
   height: 40%;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .home-page main .card .img-container img {
   transition-duration: 500ms;
@@ -97,7 +102,6 @@
 .home-page main .card .info-container .info {
   height: 6rem;
   overflow-y: hidden;
-  font-style: italic;
   color: grey;
 }
 .home-page main .card .info-container .info::-webkit-scrollbar {
@@ -138,6 +142,7 @@
   text-align: center;
   opacity: 0.3;
   font-weight: 600;
+  margin-top: 50%;
 }
 .home-page .buttons-container {
   width: 100%;
@@ -202,6 +207,7 @@
   overflow-y: scroll;
   overflow-x: hidden;
   scale: 0;
+  transform: scale(1);
   transform-origin: right;
   animation: popIn 200ms ease-in forwards;
 }
@@ -209,6 +215,7 @@
   display: none;
 }
 .home-page .modal-container.hidden {
+  transform: scale(0);
   display: none;
   z-index: -9999;
   width: 0;
@@ -700,6 +707,7 @@
 @media screen and (max-width: 480px) {
   .home-page {
     padding: 1rem;
+    padding-bottom: 3rem;
     gap: 1rem;
     justify-content: center;
   }

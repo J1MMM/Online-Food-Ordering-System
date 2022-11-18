@@ -8,6 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/index.css">
+    <link href='https://css.gg/css' rel='stylesheet'>
     <script defer src="./js/index.js"></script>
     <title>Admin</title>
 </head>
@@ -17,8 +18,10 @@
     <a href="">
         <h2>Online Food Ordering System</h2>
     </a>
-
-    <ul>
+    <button id="bugir-btn">
+        <i class="gg-menu"></i>
+    </button>
+    <ul id="nav-menu" class="hidden">
         <li>
             <a
                 class="<?= !isset($_GET['table']) ? 'active' : '' ?>" 

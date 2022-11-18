@@ -1,8 +1,12 @@
 <?php
-    define('hostname', 'localhost');
-    define('username', 'Jim');
-    define('password', 'Jimuel_092201');
-    define('database', 'php_db');
+    // define('hostname', 'localhost');
+    // define('username', 'Jim');
+    // define('password', 'Jimuel_092201');
+    // define('database', 'php_db');
+    define('hostname', 'sql12.freesqldatabase.com');
+    define('username', 'sql12576668');
+    define('password', 'cXV93jBiNV');
+    define('database', 'sql12576668');
 
     $mysqli = new mysqli(hostname, username, password, database);
 

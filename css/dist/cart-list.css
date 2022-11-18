@@ -72,6 +72,9 @@
   border: 1px solid #dfdfdf77;
   border-radius: 5px;
 }
+.cart-list-page #cart-list-quantity {
+  padding-left: 1.5rem;
+}
 .cart-list-page #header {
   font-weight: 500;
   background-color: #ffff;
@@ -97,10 +100,14 @@
   height: 4rem;
 }
 .cart-list-page .item-info .img-cont {
-  border: 1px solid #dfdfdf77;
+  border: 1px solid #33B84D;
   overflow: hidden;
+  background-color: #f5f5f5;
   width: 4rem;
   height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
 }
 .cart-list-page .item-info .img-cont img {
   width: 100%;
@@ -133,6 +140,9 @@
   .cart-list-page .check-box {
     min-width: 1rem;
     height: 1rem;
+  }
+  .cart-list-page #cart-list-quantity {
+    padding-left: 1rem;
   }
   .cart-list-page #header {
     height: 3rem !important;
@@ -173,6 +183,10 @@
     font-size: x-small;
     margin: 0;
   }
+  .cart-list-page form .checkout-bar .actions label {
+    margin: 0;
+    min-width: 4rem;
+  }
   .cart-list-page form .checkout-bar .actions input {
     margin: 0;
     margin-left: -0.5rem;
@@ -184,8 +198,11 @@
     display: none;
   }
   .cart-list-page form .checkout-bar .checkout-btn-container #price {
-    font-size: medium;
+    font-size: small;
     margin: 0;
+    position: absolute;
+    right: 7.3rem;
+    letter-spacing: 0px;
   }
   .cart-list-page form .checkout-bar .checkout-btn {
     margin: 0;

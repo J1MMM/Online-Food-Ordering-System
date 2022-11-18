@@ -20,6 +20,7 @@ var addtocartBtn = document.getElementById("addtocart-btn");
 var addtocartLoginBtn = document.getElementById("addtocart-btn-login");
 var view_item; //modal elements
 
+var foodImg = document.getElementById("food-img");
 var price = document.getElementById("price");
 var title = document.getElementById("title");
 var info = document.getElementById("info");
@@ -60,14 +61,16 @@ viewButton.forEach(function (button) {
     fetch("includes/view-product.php?id=" + button.id).then(function (res) {
       return res.json();
     }).then(function (data) {
-      //set current view item
+      console.log(data); //set current view item
+
       view_item = data; //show the modal
 
       viewModal.classList.remove("hidden");
       blurBody.classList.remove("hidden");
       body.style.overflowY = "hidden"; //display to modal
 
-      price.innerHTML = data.price;
+      foodImg.src = "./assets/images/".concat(data.food_name, ".webp");
+      price.innerHTML = '₱' + data.price;
       title.innerHTML = data.food_name;
       inputQty.value = 1;
       info.innerHTML = data.description;

@@ -3,7 +3,7 @@
     if($user){
         $user_id = $user['id'];
 
-        $result = $mysqli->query("SELECT cart_list.id, cart_list.product_id, products.food_name,
+        $result = $mysqli->query("SELECT cart_list.id, cart_list.product_id, products.food_name, products.img_path,
         products.description, products.price, cart_list.quantity, cart_list.status FROM products, 
         cart_list WHERE cart_list.product_id=products.id AND cart_list.user_id='$user_id' AND cart_list.status = 0 ORDER BY cart_list.status ASC, cart_list.id DESC");
 

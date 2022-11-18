@@ -19,10 +19,10 @@
         <?php foreach($orders as $item): ?>
             <!-- compute total price  -->
         <?php
-            $total = floatval(ltrim($item['price'], '$'));
+            $total = floatval($item['price']);
             $total *= $item['quantity'];  
             //for date format
-            $date = $item['order_date'];
+            $date = $item['ordered_at'];
             $date = strtotime($date);
             $date = date('d-M-Y', $date);
             
@@ -34,9 +34,9 @@
             <td><?=$item['address']?></td>
             <td><?=$item['additional_info']?></td>
             <td><?=$item['food_name']?></td>
-            <td><?=$item['price']?></td>
+            <td>₱<?=$item['price']?></td>
             <td><?=$item['quantity']?></td>
-            <td>$<?=$total?></td>
+            <td>₱<?=$total?></td>
             <td><?=$date?></td>
             <!-- condition for actions button  -->
             <?php if($item['status'] == 'to ship'){?>

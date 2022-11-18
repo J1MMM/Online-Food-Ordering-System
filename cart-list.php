@@ -22,8 +22,8 @@
     <form id="check-out-form" method="POST">
     <?php foreach($all_product_incart as $product): ?>
         <!-- compute totalprice -->
-        <?php 
-        $total_price = floatval(ltrim($product['price'], '$'));
+        <?php
+        $total_price = floatval($product['price']);
         $total_price *= $product['quantity'];
         // $total_price = '$'.$total_price;
         ?>
@@ -31,14 +31,14 @@
         <div class="item-info">
             <input type="checkbox" class="check-box" name="product-id[]" value="<?= $product['id']?>" amount='<?=$total_price?>' />
             <div class="img-cont">
-                <img src="https://greendroprecycling.com/wp-content/uploads/2017/04/GreenDrop_Station_Aluminum_Can_Pepsi.jpg" alt="">
+                <img src="<?= file_exists('./assets/images/'.$product['food_name'].'.webp') ? './assets/images/'.$product['food_name'].'.webp':$product['img_path'] ?>" alt="">
             </div>
             <h4 id="cart-list-title" class="title"><?= $product['food_name'] ?></h4>
         </div>
-        <span id="cart-list-price" style="color: #2DA544"><?= $product['price'] ?></span>
+        <span id="cart-list-price" style="color: #2DA544">₱<?= $product['price'] ?></span>
         <span id="cart-list-quantity"><?= $product['quantity'] ?></span>
    
-        <span id="cart-list-totalprice"><?= '$'.$total_price ?></span>
+        <span id="cart-list-totalprice"><?= '₱'.$total_price ?></span>
         <a href="/food-ordering-system/includes/delete_cartlist.php?delete=<?php echo $product['id'] ?>" id="delete-btn">Delete</a>
     </div>
     <?php endforeach ?>
@@ -50,7 +50,7 @@
         </div>
         <div class="checkout-btn-container">
             <span>Total (<span id="total-item">0 item</span>):</span>
-            <div id="price">$0.00</div> 
+            <div id="price">₱0.00</div> 
             <button class="checkout-btn" type="submit" name="checkout">Check Out</button>
         </div>
     </div>

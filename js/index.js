@@ -18,6 +18,7 @@ const addtocartBtn = document.getElementById("addtocart-btn");
 const addtocartLoginBtn = document.getElementById("addtocart-btn-login");
 let view_item;
 //modal elements
+const foodImg = document.getElementById("food-img");
 const price = document.getElementById("price");
 const title = document.getElementById("title");
 const info = document.getElementById("info");
@@ -69,6 +70,7 @@ viewButton.forEach(button => {
         fetch("includes/view-product.php?id="+button.id)
         .then((res) => res.json())
         .then((data) => {
+            console.log(data);
             //set current view item
             view_item = data;
             //show the modal
@@ -76,7 +78,8 @@ viewButton.forEach(button => {
             blurBody.classList.remove("hidden")
             body.style.overflowY = "hidden";
             //display to modal
-            price.innerHTML = data.price;
+            foodImg.src = `./assets/images/${data.food_name}.webp`;
+            price.innerHTML = '₱'+data.price;
             title.innerHTML = data.food_name;
             inputQty.value = 1;
             info.innerHTML = data.description;

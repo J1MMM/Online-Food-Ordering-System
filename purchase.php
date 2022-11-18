@@ -14,7 +14,7 @@
         <main>
             <?php foreach($orders as $item): ?>
             <?php
-            $total = floatval(ltrim($item['price'], '$'));
+            $total = floatval($item['price']);
             $total *= $item['quantity'];   
             ?>
             <div class="row">
@@ -38,12 +38,12 @@
                     </div>
                     <div class="qty-cont">
                         <span>x<?=$item['quantity']?></span>
-                        <span><?=$item['price']?></span>
+                        <span>₱<?=$item['price']?></span>
                     </div>
                 </div>
                 <div class="total-cont">
                     <span class="item-count"><?=$item['quantity']?> <?=$item['quantity'] > 1 ? 'items' : 'item'?></span>
-                    <span class="payment">Total Payment: <span class="total-price">$<?=$total?></span></span>
+                    <span class="payment">Total Payment: <span class="total-price">₱<?=$total?></span></span>
                 </div>
                 <div class="footer-cont">
                     <span>Order ID</span>

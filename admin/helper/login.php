@@ -14,3 +14,7 @@ if(isset($_POST['submit'])){
     }
 }
 ?>
+
+<style>
+    <?php include './css/index.css' ?>
+</style>

@@ -43,6 +43,6 @@ checkboxes.forEach(checkbox =>{
             }
         })
         totalItem.innerText = total_item + (total_item > 0 ? " items" : " item");
-        totalPrice.innerText = '$' + sum.toFixed(2);
+        totalPrice.innerText = '₱' + sum.toFixed(2);
     })
 })

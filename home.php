@@ -14,14 +14,12 @@
     <?php if(empty($product_data)): ?>
         <h1 class="nmf">Sorry, no product found!</h1>
     <?php endif ?>
-    <?php 
-        $items = ['bryani','chicken','coffee','coke','freshrol','fried-chicken','ice-tea','orangejuice','pizza','pizza2','snacks','steak','tapsilog']; 
-    ?>
+            
     <!-- render items  -->
     <?php foreach($product_data as $product): ?>
     <div class="card" id="card">
         <div class="img-container">
-            <img src="./assets/images/<?php echo $items[rand(0,11)]?>.jpg" alt="">
+            <img src="<?= file_exists('./assets/images/'.$product['food_name'].'.webp') ? './assets/images/'.$product['food_name'].'.webp':$product['img_path'] ?>">
         </div>
         <div class="info-container">
             <h2 class="title">
@@ -46,7 +44,7 @@
 </main>
 
 <!-- pagination buttons  -->
-<?php if(isset($total_pages) && !isset($_POST['search'])): ?>
+<?php if(isset($total_pages) && !isset($_POST['search']) && $total_pages > 4): ?>
     <div id="buttons-container" class="buttons-container">
         <!-- rendering buttons  -->
         <a class="page-button prev-btn" href="index.php?slide=<?php echo $current_slide - $prev_value?>">Prev</a>
@@ -65,7 +63,7 @@
         <h1>Product</h1>
         <hr>
         <div class="img-container">
-            <img src="https://rimage.gnst.jp/livejapan.com/public/article/detail/a/00/00/a0000595/img/basic/a0000595_main.jpg?20210126094838&q=80&rw=750&rh=536" alt="">
+            <img id="food-img" src="" alt="">
         </div>
         <div class="info-container">
             <h2 id="price" class="price"></h2>
