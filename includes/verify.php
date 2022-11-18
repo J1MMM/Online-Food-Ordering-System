@@ -9,7 +9,7 @@ if(isset($_GET['vkey'])){
     if($check_acc->num_rows == 1){
         $update = $mysqli->query("UPDATE users SET verified = 1 WHERE vkey = '$vkey'");
         if($update){
-            header('Location: /food-ordering-system/success.php');
+            header('Location: index.php?page=success');
         }else{
             echo $mysqli->error;
         }
@@ -17,6 +17,6 @@ if(isset($_GET['vkey'])){
         die("This account is invalid or already verified");
     }
 }else{
-    header('Location: /food-ordering-system/error-page.php');
+    header('Location: index.php?page=error-page');
 }
 ?>

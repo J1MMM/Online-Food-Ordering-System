@@ -32,6 +32,6 @@
             value="LOGIN"
             />
         <p>Don't have an account yet?</p>
-        <a id="create-one" href="/food-ordering-system/index.php?page=register">Signup now</a>
+        <a id="create-one" href="index.php?page=register">Signup now</a>
     </form>
 </div>

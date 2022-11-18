@@ -81,7 +81,7 @@
                 //email subject
                 $mail->Subject = 'Email Verification';
                 //email body 
-                $mail->Body = "<a href='http://localhost/food-ordering-system/includes/verify.php?vkey=$vkey'>confirm your account</a>";
+                $mail->Body = "<a href='https://online-food-ordering-system-v1.herokuapp.com/includes/verify.php?vkey=$vkey'>confirm your account</a>";
                 //send email
                 $mail->send();
                 header('Location: index.php?page=verify&email='.$email);

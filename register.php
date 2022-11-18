@@ -61,7 +61,7 @@
             
         <div class="AHAC">
             <span>Already have an account?</span>
-            <a id="back" href="/food-ordering-system/index.php?page=login">Login</a>
+            <a id="back" href="index.php?page=login">Login</a>
         </div>
     </form>
 </div>

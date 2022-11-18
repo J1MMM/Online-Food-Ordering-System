@@ -80,7 +80,7 @@
                                 <a id="modal-menu" href="index.php?page=user">My Account</a>
                                 <a id="modal-menu" href="index.php?page=purchase&column=all">My Purchase</a>
                             </div>
-                            <a href="/food-ordering-system/includes/logout.php" class="logout-btn">
+                            <a href="index.php?page=logout" class="logout-btn">
                                 <i class="gg-log-in"></i>
                                 Sign Out
                             </a>
@@ -90,7 +90,7 @@
                 <!-- burger menu  -->
             <a id="modal-menu" href="index.php?page=user" class="burger-menu-links">My Account</a>
             <a id="modal-menu" href="index.php?page=purchase&column=all" class="burger-menu-links">My Purchase</a>
-            <a href="/food-ordering-system/includes/logout.php" class="logout-btn burger-menu-links">Sign out</a>
+            <a href="index.php?page=logout" class="logout-btn burger-menu-links">Sign out</a>
             <?php } ?>
             
 
