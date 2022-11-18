@@ -9,7 +9,7 @@ if(isset($_GET['vkey'])){
     if($check_acc->num_rows == 1){
         $update = $mysqli->query("UPDATE users SET verified = 1 WHERE vkey = '$vkey'");
         if($update){
-            header('Location: index.php?page=success');
+            header('Location: ../index.php?page=success');
         }else{
             echo $mysqli->error;
         }
