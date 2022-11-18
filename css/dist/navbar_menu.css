@@ -66,6 +66,8 @@
 .navbar .nav-profile .profile-modal .info-cont .name {
   font-weight: 500;
   margin-bottom: 0;
+  max-height: 2rem;
+  overflow: hidden;
 }
 .navbar .nav-profile .profile-modal .info-cont .email {
   margin-top: 0;

@@ -369,7 +369,7 @@
     scale: 1;
   }
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1350px) {
   .home-page {
     padding: 2rem;
     gap: 1rem;

@@ -70,6 +70,8 @@
             .name{
                 font-weight: 500;
                 margin-bottom: 0;
+                max-height: 2rem;
+                overflow: hidden;
             }
             .email{
                 margin-top: 0;

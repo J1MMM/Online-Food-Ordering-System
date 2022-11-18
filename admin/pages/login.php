@@ -1,7 +1,7 @@
 <?php 
-include '../config/DBconnection.php';
 include './helper/login.php';
 ?>
+
 <div class="login-page">
     <form method="POST">
         <h3>Admin Page</h3>

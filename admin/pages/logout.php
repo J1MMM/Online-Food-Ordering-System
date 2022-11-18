@@ -1,4 +1,4 @@
 <?php
     session_destroy();
-    header('Location: /food-ordering-system/admin/');
+    header('Location: index.php');
 ?>

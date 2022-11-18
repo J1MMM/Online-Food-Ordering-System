@@ -17,7 +17,7 @@
     
     if(isset($_GET['completed'])){
         $qry = $mysqli->query("UPDATE orders SET status='completed' WHERE id='{$_GET['completed']}' LIMIT 1");
-        header("Location: /food-ordering-system/index.php?page=purchase&column=completed");
+        header("Location: index.php?page=purchase&column=completed");
     }
 ?>
 <!-- js auto scroll -->

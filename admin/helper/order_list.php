@@ -1,7 +1,7 @@
 <?php 
     if(!isset($_SESSION['admin'])){
-    header('Location: /food-ordering-system/admin/login.php');
-    }
+    header("Location: index.php?page=login");
+}
 ?>
 <?php
     $qry = $mysqli->query("SELECT orders.id, orders.status,  orders.ordered_at, address.fullname, address.phone_number, address.address, address.additional_info, products.food_name, products.price, cart_list.quantity FROM orders,address,products,cart_list WHERE cart_list.id = orders.cart_id AND address.user_id = orders.user_id AND products.id = cart_list.product_id AND orders.status = 'pending' ORDER BY orders.id");
@@ -29,18 +29,18 @@
 
     if(isset($_GET['reject'])){
         $qry = $mysqli->query("UPDATE orders SET status='rejected' WHERE id='{$_GET['reject']}' LIMIT 1");
-        header("Location: /food-ordering-system/admin/");
+        header("Location: index.php");
     }
     if(isset($_GET['approve'])){
         $qry = $mysqli->query("UPDATE orders SET status='to ship' WHERE id='{$_GET['approve']}' LIMIT 1");
-        header("Location: /food-ordering-system/admin/");
+        header("Location: index.php");
     }
     if(isset($_GET['ship'])){
         $qry = $mysqli->query("UPDATE orders SET status='to receive' WHERE id='{$_GET['ship']}' LIMIT 1");
-        header("Location: /food-ordering-system/admin/index.php?page=home&table=toship");
+        header("Location: index.php?page=home&table=toship");
     }
     if(isset($_GET['delivered'])){
         $qry = $mysqli->query("UPDATE orders SET status='received' WHERE id='{$_GET['delivered']}' LIMIT 1");
-        header("Location: /food-ordering-system/admin/index.php?page=home&table=toreceive");
+        header("Location: index.php?page=home&table=toreceive");
     }
 ?>

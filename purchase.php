@@ -21,7 +21,7 @@
                 <div class="header">
                     <span class="brand">Online Food Ordering System</span>
                     <?php if($item['status'] == 'received'){?>
-                        <span><a href="/food-ordering-system/index.php?page=purchase&completed=<?=$item['id']?>">RECEIVED</a></span>
+                        <span><a href="index.php?page=purchase&completed=<?=$item['id']?>">RECEIVED</a></span>
                     <?php }else if($item['status'] == 'to receive'){ ?>
                         <span><?=strtoupper($item['status'])?></span>
                     <?php }else{ ?>

@@ -1,5 +1,4 @@
 <?php
-session_start();
 
 if(isset($_POST['submit'])){
 
@@ -10,7 +9,7 @@ if(isset($_POST['submit'])){
     if($result->num_rows != 0){
         $user_data = $result->fetch_assoc();
         $_SESSION['admin'] = $user_data['id'];
-        header('Location: /food-ordering-system/admin/');
+        header('Location: index.php?page=home');
     }
 }
 ?>

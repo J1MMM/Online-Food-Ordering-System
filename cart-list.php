@@ -39,7 +39,7 @@
         <span id="cart-list-quantity"><?= $product['quantity'] ?></span>
    
         <span id="cart-list-totalprice"><?= '₱'.$total_price ?></span>
-        <a href="/food-ordering-system/includes/delete_cartlist.php?delete=<?php echo $product['id'] ?>" id="delete-btn">Delete</a>
+        <a href="./includes/delete_cartlist.php?delete=<?php echo $product['id'] ?>" id="delete-btn">Delete</a>
     </div>
     <?php endforeach ?>
     <div id="checkout-bar" class="checkout-bar shadow">

@@ -5,6 +5,6 @@
         $id = $_GET['delete'];
 
         $result = $mysqli->query("DELETE FROM cart_list WHERE id='$id' LIMIT 1");
-        header('Location: /food-ordering-system/index.php?page=cart-list');
+        header('Location: ../index.php?page=cart-list');
     }
 ?>
