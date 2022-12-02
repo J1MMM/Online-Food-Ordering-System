@@ -3,10 +3,10 @@
     // define('username', 'Jim');
     // define('password', 'Jimuel_092201');
     // define('database', 'php_db');
-    define('hostname', 'sql12.freesqldatabase.com');
-    define('username', 'sql12576668');
-    define('password', 'cXV93jBiNV');
-    define('database', 'sql12576668');
+    define('hostname', 'localhost');
+    define('username', 'id19946946_jim');
+    define('password', 'Jimuel_092201');
+    define('database', 'id19946946_onlinefoodorderingsystemv3');
 
     $mysqli = new mysqli(hostname, username, password, database);
 
