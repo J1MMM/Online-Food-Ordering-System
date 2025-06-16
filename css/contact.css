@@ -1,0 +1,131 @@
+
+.contact-page{
+    width: 100%;
+    min-height: 30rem;
+    background-color: #f5f5f5;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    position: relative;
+
+}
+.contact-page .right-container{
+    width: 100%;
+    background-color: #fff;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 4rem;
+    
+}
+.contact-page .left-container{
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    
+
+}
+.contact-page .left-container .wrapper{
+    text-align: center;
+    width: 100%;
+    max-width: 27rem;
+    position: absolute;
+    right: 15%;
+    top: 15%;
+}
+.contact-page .left-container .wrapper h1{
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin: 0;
+    color: rgba(0, 0, 0, 0.8);
+    margin-bottom: .5rem;
+}
+.contact-page .left-container .wrapper p{
+    margin: 0;
+    margin-bottom: .5rem;
+}
+.contact-page .left-container .wrapper i{
+    display: block;
+    transform: scale(4);
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    color: #2DA544;
+    box-sizing: border-box;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+.contact-page .left-container .wrapper a{
+    font-size: larger;
+    color: #2DA544;
+}
+.contact-page .right-container form{
+    width: 100%;
+    max-width: 30rem;
+    position: relative;
+}
+
+.contact-page .right-container label::after{
+    content: " *";
+    color: #2DA544;
+}
+.contact-page .right-container input{
+    height: 1.5rem;
+    width: 100%;
+    padding: .5rem;
+    color: rgba(0, 0, 0, 0.836);
+    font-size: medium;
+    margin-bottom: 1rem;
+}
+.contact-page .right-container textarea{
+    width: 100%;
+    max-width: 30rem;
+    height: 8rem;
+    max-height: 15rem;
+    resize: vertical;
+    padding: .5rem;
+    font-size: larger;
+    color: rgba(0, 0, 0, 0.836);
+}
+.contact-page .right-container button{
+    float: right;
+    padding: .8rem 2.5rem;
+    font-size: medium;
+    color: #fff;
+    background-color: #2DA544;
+    border: none;
+    font-weight: 500;
+    letter-spacing: 1px;
+    cursor: pointer;
+    margin-top: 2rem;
+    margin-right: -1rem;
+}
+.contact-page .right-container .message{
+    color: #2DA544;
+}
+
+@media (max-width: 1230px) {
+    .contact-page{
+        grid-template-columns: 100%;
+    }
+    .contact-page .left-container{
+        padding: 1rem;
+        box-sizing: border-box;
+    }
+    .contact-page .left-container .wrapper{
+        position: static;
+        width: 100%;
+        /* border: 1px solid red; */
+    }
+    .contact-page .left-container .wrapper p{
+        font-size: small;
+    }
+    .contact-page .left-container .wrapper i{
+        transform: scale(3);
+
+    }
+    .contact-page .left-container .wrapper a{
+        font-size: medium;
+    }
+    .contact-page .right-container{
+        padding: 2rem;        
+    }
+}

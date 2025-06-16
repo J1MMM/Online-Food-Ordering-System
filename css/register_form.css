@@ -1,0 +1,161 @@
+.register-page {
+  text-align: center;
+  background-color: #f5f5f5;
+  width: 100%;
+  box-sizing: border-box;
+  height: 550px;
+  margin-top: 5rem;
+  padding: 2rem;
+}
+.register-page #reg-err-msg {
+  text-align: center;
+  color: red;
+  font-size: small;
+}
+.register-page #reg-err-msg span {
+  color: #2da544;
+}
+.register-page #register-form {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 40rem;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 2rem;
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+}
+.register-page #register-form h2 {
+  margin-top: 0;
+  font-weight: 500;
+}
+.register-page #register-form hr {
+  width: 100%;
+}
+.register-page #register-form .input-container {
+  display: grid;
+  grid-template-columns: 8% auto;
+  margin-bottom: 1rem;
+  align-items: center;
+  width: 100%;
+  /* Change the white to any color */
+}
+.register-page #register-form .input-container input:-webkit-autofill,
+.register-page #register-form .input-container input:-webkit-autofill:hover,
+.register-page #register-form .input-container input:-webkit-autofill:focus,
+.register-page #register-form .input-container input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+.register-page #register-form .input-container i {
+  transition: 500ms;
+  margin-left: -0.5rem;
+}
+.register-page #register-form .input-container i:hover {
+  color: #2da544;
+}
+.register-page #register-form .input-container input {
+  font-family: Poppins, sans-serif;
+  font-weight: 600;
+  border: none;
+  width: 100%;
+  padding: 0.8rem 1rem;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  border: 1px solid #bfc4cb;
+}
+.register-page #register-form .input-container input::-moz-placeholder {
+  -moz-transition: 500ms;
+  transition: 500ms;
+  transition-timing-function: ease-in-out;
+}
+.register-page #register-form .input-container input:-ms-input-placeholder {
+  -ms-transition: 500ms;
+  transition: 500ms;
+  transition-timing-function: ease-in-out;
+}
+.register-page #register-form .input-container input::placeholder {
+  transition: 500ms;
+  transition-timing-function: ease-in-out;
+}
+.register-page #register-form .input-container input:focus {
+  border-bottom: 1px solid #2da544;
+}
+.register-page #register-form .input-container input:focus::-moz-placeholder {
+  transform: translate(-10rem);
+}
+.register-page
+  #register-form
+  .input-container
+  input:focus:-ms-input-placeholder {
+  transform: translate(-10rem);
+}
+.register-page #register-form .input-container input:focus::placeholder {
+  transform: translate(-10rem);
+}
+.register-page #register-form .input-container div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  gap: 1rem;
+}
+.register-page #register-form .input-container div input {
+  max-width: 90% !important;
+}
+.register-page #register-form .input-container #register-btn {
+  cursor: pointer;
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  font-weight: 600;
+  position: relative;
+  left: 0;
+  background-color: #2da544;
+  color: #fff;
+  border: none;
+  letter-spacing: 2px;
+  max-width: 8rem;
+}
+.register-page #register-form .input-container #register-btn:hover {
+  background-color: #33b84d;
+}
+.register-page .AHAC {
+  margin-top: 1rem;
+}
+.register-page .AHAC span {
+  margin-top: 1rem;
+  margin-bottom: 0;
+  font-size: small;
+}
+.register-page .AHAC #back {
+  font-size: small;
+  color: #2da544;
+}
+.register-page .AHAC #back:hover {
+  color: #33b84d;
+}
+
+@media screen and (max-width: 480px) {
+  .register-page #register-form {
+    padding: 2rem;
+    max-width: none;
+    height: 100%;
+    width: 100%;
+    margin-top: 0;
+  }
+  .register-page #register-form .input-container {
+    grid-template-columns: 10% auto;
+  }
+  .register-page #register-form #inpt-cont {
+    gap: 0.5rem !important;
+  }
+  .register-page #register-form i {
+    margin-bottom: -0.5rem;
+  }
+} /*# sourceMappingURL=register_form.css.map */

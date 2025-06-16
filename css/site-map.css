@@ -1,0 +1,26 @@
+.site-map-page{
+    background-color: #fff;
+    width: 100%;
+    max-width: 70rem;
+    min-height: 30rem;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    padding: 2rem;
+}
+
+.site-map-page h1{
+    margin: 0;
+    font-weight: 600;
+}
+.site-map-page a{
+    text-decoration: none;
+    color: #000;
+    font-weight: 400;
+}
+.site-map-page a:hover{
+    color: #2DA544;
+}
+.site-map-page ul{
+    list-style: circle;
+}
